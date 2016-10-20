@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { TodoListDisplayComponent } from './components/todoListDisplay'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListDisplayComponent
   ],
   imports: [
     BrowserModule,

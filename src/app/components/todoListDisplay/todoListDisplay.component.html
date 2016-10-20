@@ -1,0 +1,8 @@
+<div class="todoListDisplay">
+	<ul>
+		<li *ngFor="let item of todoItems">
+			<span>{{item.name}}</span><input type="checkbox" name="isCompleted" [(ngModel)]="item.isComplete">
+		</li>
+	</ul>
+	{{ todoItems | json}}
+</div>
