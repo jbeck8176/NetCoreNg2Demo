@@ -1,8 +1,10 @@
 <div class="todoListDisplay">
 	<ul>
 		<li *ngFor="let item of todoItems">
-			<span>{{item.name}}</span><input type="checkbox" name="isCompleted" [(ngModel)]="item.isComplete">
+			<input type="checkbox" name="isCompleted" [(ngModel)]="item.isComplete" (change)="todoItemCompletedChanged(item.key)">			: <span>{{item.name}}</span>
+			<a href="#" (click)="deleteTodoItem(item.key, $event)">Delete</a>
 		</li>
 	</ul>
-	{{ todoItems | json}}
+	<!--{{ todoItems | json}}-->
+	{{todoItems | json}}
 </div>
