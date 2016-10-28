@@ -1,10 +1,15 @@
 <div class="todoListDisplay">
-	<ul>
-		<li *ngFor="let item of todoItems">
-			<input type="checkbox" name="isCompleted" [(ngModel)]="item.isComplete" (change)="todoItemCompletedChanged(item.key)">			: <span>{{item.name}}</span>
+	<md-list class="app-list">
+		<md-list-item *ngFor="let item of todoItems">
+			<div>
+				<md-checkbox type="checkbox" name="isCompleted" [(ngModel)]="item.isComplete" (change)="todoItemCompletedChanged(item.key)">{{item.name}}
+					<button md-raised-button (click)="deleteTodoItem(item.key, $event)">DELETE</button>
+				</md-checkbox>
+			</div>
+		</md-list-item>
+	</md-list>
+	<!--{{ todoItems | json}}
+	 : <span>{{item.name}}</span>
 			<a href="#" (click)="deleteTodoItem(item.key, $event)">Delete</a>
-		</li>
-	</ul>
-	<!--{{ todoItems | json}}-->
-	{{todoItems | json}}
+	-->
 </div>

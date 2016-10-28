@@ -1,4 +1,4 @@
 <div class="todoItemAdd">
-	<input [(ngModel)]="addItem.Name">
-	<button (click)="addTodoItem($event)">Add</button>
+	<md-input placeholder="New Todo" [(ngModel)]="addItem.name"></md-input>
+	<button md-raised-button color="primary" (click)="addTodoItem($event)">Add</button>
 </div>
